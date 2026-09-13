@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Юбилей Светланы — 24 октября 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    color:#3d3a36;
+    background:#f8f5ef;
+    overflow-x:hidden;
+}
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.38),
+        rgba(0,0,0,.45)
+    ),
+    url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.hero-content{
+    padding:30px;
+    animation:fadeIn 2s ease;
+}
+
+.hero-small{
+    font-size:14px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:100px;
+    font-weight:500;
+    line-height:1;
+}
+
+.hero-date{
+    margin-top:30px;
+    font-size:25px;
+    letter-spacing:3px;
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    font-size:12px;
+    letter-spacing:3px;
+    opacity:.8;
+}
+
+.title{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:58px;
+    font-weight:500;
+    margin-bottom:35px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
+}
+
+.gold{
+    color:#b28a45;
+}
+
+/* КАЛЕНДАРЬ */
+
+.calendar-section{
+    background:#fff;
+}
+
+.calendar{
+    max-width:520px;
+    margin:45px auto 0;
+    background:#faf8f4;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+.calendar-header{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+.weekdays,
+.days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    gap:8px;
+}
+
+.weekdays div{
+    font-size:12px;
+    color:#999;
+    padding-bottom:10px;
+}
+
+.days div{
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+
+.days .empty{
+    background:none;
+}
+
+.days .event{
+    background:#b28a45;
+    color:#fff;
+    font-weight:600;
+    position:relative;
+    box-shadow:0 5px 15px rgba(178,138,69,.35);
+}
+
+.days .event::after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    background:#fff;
+    border-radius:50%;
+    bottom:5px;
+}
+
+/* ТАЙМЕР */
+
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:45px;
+}
+
+.timer-card{
+    background:#fff;
+    width:125px;
+    padding:25px 15px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+}
+
+.timer-number{
+    font-size:38px;
+    font-weight:600;
+    color:#b28a45;
+}
+
+.timer-label{
+    margin-top:7px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:#888;
+}
+
+/* МЕСТО */
+
+.place{
+    text-align:center;
+}
+
+.place-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.address{
+    line-height:1.8;
+    font-size:17px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 32px;
+    border-radius:50px;
+    background:#b28a45;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ПРОГРАММА */
+
+.program{
+    max-width:700px;
+    margin:45px auto 0;
+}
+
+.program-item{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    background:#fff;
+    padding:25px 30px;
+    margin-bottom:15px;
+    border-radius:18px;
+    box-shadow:0 7px 25px rgba(0,0,0,.05);
+}
+
+.program-time{
+    min-width:90px;
+    color:#b28a45;
+    font-size:21px;
+    font-weight:600;
+}
+
+.program-text{
+    font-size:16px;
+}
+
+/* ПОЖЕЛАНИЯ */
+
+.wishes{
+    background:#fff;
+}
+
+.wishes-list{
+    max-width:800px;
+    margin:40px auto 0;
+}
+
+.wish{
+    padding:28px 30px;
+    margin-bottom:18px;
+    background:#faf8f4;
+    border-radius:20px;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.wish-number{
+    display:inline-flex;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#b28a45;
+    color:white;
+    align-items:center;
+    justify-content:center;
+    margin-right:12px;
+}
+
+/* АНКЕТА */
+
+.form-section{
+    background:#f2eee7;
+}
+
+.form{
+    max-width:700px;
+    margin:40px auto 0;
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 50px rgba(0,0,0,.08);
+}
+
+.form-intro{
+    text-align:center;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.form-group{
+    margin-bottom:28px;
+}
+
+.form-label{
+    display:block;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+input,
+select{
+    width:100%;
+    padding:15px 17px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-family:'Montserrat',sans-serif;
+    font-size:15px;
+    outline:none;
+    background:#fff;
+}
+
+input:focus,
+select:focus{
+    border-color:#b28a45;
+}
+
+/* RADIO */
+
+.radio-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.radio-option{
+    position:relative;
+    flex:1;
+    min-width:200px;
+}
+
+.radio-option input{
+    position:absolute;
+    opacity:0;
+}
+
+.radio-option label{
+    display:block;
+    text-align:center;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.radio-option input:checked + label{
+    background:#b28a45;
+    color:#fff;
+    border-color:#b28a45;
+}
+
+/* CHECKBOXES */
+
+.drinks{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.drink{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.drink input{
+    width:auto;
+}
+
+.submit{
+    width:100%;
+    border:0;
+    cursor:pointer;
+    font-family:'Montserrat',sans-serif;
+    font-size:16px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#292724;
+    color:#fff;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.footer-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.footer-date{
+    letter-spacing:3px;
+}
+
+/* АНИМАЦИЯ */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media(max-width:700px){
+
+    section{
+        padding:70px 16px;
+    }
+
+    .hero h1{
+        font-size:68px;
+    }
+
+    .hero-date{
+        font-size:19px;
+    }
+
+    .title{
+        font-size:44px;
+    }
+
+    .timer-card{
+        width:105px;
+    }
+
+    .timer-number{
+        font-size:30px;
+    }
+
+    .program-item{
+        padding:20px;
+        gap:15px;
+    }
+
+    .program-time{
+        min-width:70px;
+        font-size:18px;
+    }
+
+    .form{
+        padding:25px 20px;
+    }
+
+    .drinks{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* НАВИГАЦИЯ ПО СТРАНИЦАМ */
+
+.page-nav{
+    position:fixed;
+    right:22px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.page-nav a{
+    width:11px;
+    height:11px;
+    border:1px solid rgba(178,138,69,.8);
+    border-radius:50%;
+    background:rgba(255,255,255,.75);
+    transition:.25s;
+}
+
+.page-nav a:hover,
+.page-nav a.active{
+    background:#b28a45;
+    transform:scale(1.35);
+}
+
+@media(max-width:700px){
+    .page-nav{
+        right:10px;
+        gap:8px;
+    }
+
+    .page-nav a{
+        width:9px;
+        height:9px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="page-nav" aria-label="Навигация по страницам">
+<a href="#page1" aria-label="Страница 1"></a>
+<a href="#page2" aria-label="Страница 2"></a>
+<a href="#page3" aria-label="Страница 3"></a>
+<a href="#page4" aria-label="Страница 4"></a>
+<a href="#page5" aria-label="Страница 5"></a>
+<a href="#page6" aria-label="Страница 6"></a>
+<a href="#page7" aria-label="Страница 7"></a>
+<a href="#page8" aria-label="Страница 8"></a>
+</nav>
+
+
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+
+<section class="hero" id="page1">
+
+<div class="hero-content">
+
+<h1>Приглашение<br>на юбилей</h1>
+
+<div class="hero-date">
+24 октября 2026
+</div>
+
+</div>
+</section>
+
+
+<!-- ПРИГЛАШЕНИЕ -->
+
+<section id="page2">
+
+<div class="container">
+
+<h2 class="title">
+Дорогие друзья!
+</h2>
+
+<p class="subtitle">
+
+Я буду очень рада разделить с вами этот
+особенный день — мой юбилей.
+
+<br><br>
+
+Приглашаю вас провести этот вечер
+в тёплой и праздничной атмосфере,
+в кругу близких и дорогих мне людей.
+
+<br><br>
+
+<span class="gold">
+Очень жду встречи с вами!
+</span>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- КАЛЕНДАРЬ -->
+
+<section class="calendar-section" id="page3">
+
+<div class="container">
+
+<h2 class="title">
+Сохраняйте дату
+</h2>
+
+<p class="subtitle">
+Буду ждать вас <span class="gold">24 октября 2026 года</span>
+</p>
+
+<div class="calendar">
+
+<div class="calendar-header">
+Октябрь 2026
+</div>
+
+<div class="weekdays">
+<div>ПН</div>
+<div>ВТ</div>
+<div>СР</div>
+<div>ЧТ</div>
+<div>ПТ</div>
+<div>СБ</div>
+<div>ВС</div>
+</div>
+
+<div class="days">
+
+<div></div>
+<div></div>
+<div></div>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div>11</div>
+
+<div>12</div>
+<div>13</div>
+<div>14</div>
+<div>15</div>
+<div>16</div>
+<div>17</div>
+<div>18</div>
+
+<div>19</div>
+<div>20</div>
+<div>21</div>
+<div>22</div>
+<div>23</div>
+
+<div class="event">
+24
+</div>
+
+<div>25</div>
+
+<div>26</div>
+<div>27</div>
+<div>28</div>
+<div>29</div>
+<div>30</div>
+<div>31</div>
+
+</div>
+
+</div>
+
+<p class="subtitle" style="margin-top:35px;">
+Ждём вас!
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ТАЙМЕР -->
+
+<section id="page4">
+
+<div class="container">
+
+<h2 class="title">
+До встречи осталось
+</h2>
+
+<div class="timer">
+
+<div class="timer-card">
+<div class="timer-number" id="days">0</div>
+<div class="timer-label">дней</div>
+</div>
+
+<div class="timer-card">
+<div class="timer-number" id="hours">0</div>
+<div class="timer-label">часов</div>
+</div>
+
+<div class="timer-card">
+<div class="timer-number" id="minutes">0</div>
+<div class="timer-label">минут</div>
+</div>
+
+<div class="timer-card">
+<div class="timer-number" id="seconds">0</div>
+<div class="timer-label">секунд</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- МЕСТО -->
+
+<section class="calendar-section" id="page5">
+
+<div class="container place">
+
+<h2 class="title">
+Место проведения
+</h2>
+
+<div class="place-name">
+Ресторан «Телави»
+</div>
+
+<div class="address">
+
+Подсолнечная ул., 2А<br>
+посёлок Вешки
+
+</div>
+
+<a
+class="button"
+href="https://yandex.ru/maps/-/CTtCmWzI"
+target="_blank"
+>
+Открыть маршрут на карте
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ПРОГРАММА -->
+
+<section id="page6">
+
+<div class="container">
+
+<h2 class="title">
+Программа вечера
+</h2>
+
+<div class="program">
+
+<div class="program-item">
+<div class="program-time">17:00</div>
+<div class="program-text">
+Сбор гостей
+</div>
+</div>
+
+<div class="program-item">
+<div class="program-time">17:30</div>
+<div class="program-text">
+Банкет
+</div>
+</div>
+
+<div class="program-item">
+<div class="program-time">22:00</div>
+<div class="program-text">
+Праздничный торт
+</div>
+</div>
+
+<div class="program-item">
+<div class="program-time">23:30</div>
+<div class="program-text">
+Завершение вечера
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ПОЖЕЛАНИЯ -->
+
+<section class="wishes" id="page7">
+
+<div class="container">
+
+<h2 class="title">
+Пожелания
+</h2>
+
+<div class="wishes-list">
+
+<div class="wish">
+<strong>1)</strong>
+Главное, что просим вас принести с собой —
+это ваше прекрасное настроение и искренние улыбки!
+</div>
+
+<div class="wish">
+<strong>2)</strong>
+Лучший подарок тот, который не нужно
+пылесосить, гладить и искать для него место дома.
+Поэтому будем благодарны за подарок в конверте.
+</div>
+
+<div class="wish">
+<strong>3)</strong>
+Я хочу провести этот вечер в формате взрослого праздника,
+поэтому мероприятие будет без детей. Благодарю за понимание.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- АНКЕТА -->
+
+<section class="form-section" id="page8">
+
+<div class="container">
+
+<h2 class="title">
+Анкета гостя
+</h2>
+
+<p class="subtitle">
+Пожалуйста, подтвердите присутствие —
+это поможет в организации праздника
+</p>
+
+
+<form class="form" id="guestForm">
+
+
+<!-- ИМЯ -->
+
+<div class="form-group">
+
+<label class="form-label">
+1) Фамилия и Имя
+</label>
+
+<input
+type="text"
+id="guestName"
+placeholder="Введите фамилию и имя"
+required
+>
+
+</div>
+
+
+<!-- ПРИСУТСТВИЕ -->
+
+<div class="form-group">
+
+<label class="form-label">
+2) Планируете прийти?
+</label>
+
+<div class="radio-group">
+
+<div class="radio-option">
+
+<input
+type="radio"
+name="attendance"
+id="yes"
+value="Да, с удовольствием"
+required
+>
+
+<label for="yes">
+Да, с удовольствием
+</label>
+
+</div>
+
+
+<div class="radio-option">
+
+<input
+type="radio"
+name="attendance"
+id="no"
+value="Не смогу"
+>
+
+<label for="no">
+Не смогу
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- СПУТНИК -->
+
+<div class="form-group">
+
+<label class="form-label">
+3) Имя спутника/спутницы
+(если будете не одни)
+</label>
+
+<input
+type="text"
+id="companion"
+placeholder="Введите имя или оставьте поле пустым"
+>
+
+</div>
+
+
+<!-- НАПИТКИ -->
+
+<div class="form-group">
+
+<label class="form-label">
+4) Ваши предпочтения (напитки)
+</label>
+
+<div class="drinks">
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Шампанское"
+>
+Шампанское
+</label>
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Белое вино"
+>
+Белое вино
+</label>
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Красное вино"
+>
+Красное вино
+</label>
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Водка"
+>
+Водка
+</label>
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Виски"
+>
+Виски
+</label>
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Коньяк"
+>
+Коньяк
+</label>
+
+<label class="drink">
+<input
+type="checkbox"
+name="drink"
+value="Не пью алкоголь"
+>
+Не пью алкоголь
+</label>
+
+</div>
+
+</div>
+
+
+<button
+class="button submit"
+type="submit"
+>
+Отправить анкету
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-name">
+Светлана
+</div>
+
+<div class="footer-date">
+24 • 10 • 2026
+</div>
+
+<br>
+
+<div>
+До встречи! ❤️
+</div>
+
+</footer>
+
+
+<script>
+
+/* ТАЙМЕР */
+
+const targetDate =
+new Date("2026-10-24T17:00:00+03:00").getTime();
+
+function updateTimer(){
+
+const now = new Date().getTime();
+
+const difference = targetDate - now;
+
+if(difference <= 0){
+
+document.getElementById("days").innerText = "0";
+document.getElementById("hours").innerText = "0";
+document.getElementById("minutes").innerText = "0";
+document.getElementById("seconds").innerText = "0";
+
+return;
+
+}
+
+const days =
+Math.floor(
+difference / (1000 * 60 * 60 * 24)
+);
+
+const hours =
+Math.floor(
+(difference % (1000 * 60 * 60 * 24))
+/ (1000 * 60 * 60)
+);
+
+const minutes =
+Math.floor(
+(difference % (1000 * 60 * 60))
+/ (1000 * 60)
+);
+
+const seconds =
+Math.floor(
+(difference % (1000 * 60))
+/ 1000
+);
+
+document.getElementById("days").innerText = days;
+document.getElementById("hours").innerText = hours;
+document.getElementById("minutes").innerText = minutes;
+document.getElementById("seconds").innerText = seconds;
+
+}
+
+updateTimer();
+
+setInterval(updateTimer,1000);
+
+
+/* АНКЕТА */
+
+document
+.getElementById("guestForm")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("guestName").value;
+
+const attendance =
+document.querySelector(
+'input[name="attendance"]:checked'
+)?.value || "";
+
+const companion =
+document.getElementById("companion").value
+|| "Нет";
+
+const drinks =
+Array.from(
+document.querySelectorAll(
+'input[name="drink"]:checked'
+)
+)
+.map(item => item.value)
+.join(", ") || "Не указано";
+
+
+const message =
+
+`АНКЕТА ГОСТЯ — ЮБИЛЕЙ СВЕТЛАНЫ
+
+Фамилия и имя:
+${name}
+
+Планирует прийти:
+${attendance}
+
+Спутник/спутница:
+${companion}
+
+Предпочтения по напиткам:
+${drinks}`;
+
+
+/*
+Открываем Telegram.
+
+Пользователь сможет отправить
+сформированное сообщение Светлане.
+*/
+
+const telegramURL =
+"https://t.me/svetlana102026?text="
++
+encodeURIComponent(message);
+
+window.open(
+telegramURL,
+"_blank"
+);
+
+});
+
+
+/* АКТИВНАЯ СТРАНИЦА В НАВИГАЦИИ */
+
+const pageSections = document.querySelectorAll("section[id]");
+const pageLinks = document.querySelectorAll(".page-nav a");
+
+const pageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            pageLinks.forEach(link => {
+                link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === "#" + entry.target.id
+                );
+            });
+        }
+    });
+}, { threshold: 0.45 });
+
+pageSections.forEach(section => pageObserver.observe(section));
+
+</script>
+
+</body>
+</html>
